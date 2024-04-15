@@ -39,7 +39,7 @@ app.set("view engine", "ejs");
 
 //conecting to our mongoose DB
 mongoose
-  .connect(process.env.DATABASE)
+  .connect("mongodb+srv://aaryan:abc12345@cluster0.p9zdt9e.mongodb.net/?retryWrites=true&w=majority")
   .then(() => console.log("mongoDB connected"))
   .catch((err) => console.log(err));
 
