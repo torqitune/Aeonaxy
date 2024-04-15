@@ -30,7 +30,7 @@ app.use(
   })
 );
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 app.use(bodyParser.json()); //this will help use parse the json from the incoming http request
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
