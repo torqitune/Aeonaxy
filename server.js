@@ -25,7 +25,7 @@ const app = express(); //creating an instance of express application , now app o
 app.use(
   cors({
     //The CORS (Cross-Origin Resource Sharing) middleware in Express is used to enable cross-origin requests from a browser
-    origin: "http://localhost:5173", //only this origin (domain) is allowed to access the resources of this server
+    origin: '*', //only this origin (domain) is allowed to access the resources of this server
     credentials: true,
   })
 );
@@ -38,8 +38,10 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 //conecting to our mongoose DB
+
+// mongodb+srv://aaryansingh2905:Sna9hZFsZoESqBK7@cluster0.h8pzoun.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 mongoose
-  .connect("mongodb+srv://aaryan:abc12345@cluster0.p9zdt9e.mongodb.net/?retryWrites=true&w=majority")
+  .connect("mongodb://aaryansingh2905:8eUQSKGrNzjGtSWL@ac-ldxouiq-shard-00-00.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-01.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-02.jkwwfoz.mongodb.net:27017/?ssl=true&replicaSet=atlas-ura3ql-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0")
   .then(() => console.log("mongoDB connected"))
   .catch((err) => console.log(err));
 

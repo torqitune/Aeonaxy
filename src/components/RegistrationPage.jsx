@@ -26,7 +26,8 @@ const RegistrationPage = () => {
     try{
 
       //post functio is provided by the axios library for making post requests. 
-      const res = await axios.post('http://localhost:8080/register',formData);
+      const res = await axios.post('https://aeonaxy-4-ysty.onrender.com/register',formData);
+      // const res = await axios.post(`${process.env.BASE_URL}/register`,formData);
 
       console.log("userID send in this",res.data);      //check your console of browser to see this value
       
