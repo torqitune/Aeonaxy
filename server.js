@@ -45,10 +45,21 @@ app.set("view engine", "ejs");
 //conecting to our mongoose DB
 
 // mongodb+srv://aaryansingh2905:Sna9hZFsZoESqBK7@cluster0.h8pzoun.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-mongoose
-  .connect("mongodb://aaryansingh2905:8eUQSKGrNzjGtSWL@ac-ldxouiq-shard-00-00.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-01.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-02.jkwwfoz.mongodb.net:27017/?ssl=true&replicaSet=atlas-ura3ql-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0")
-  .then(() => console.log("mongoDB connected"))
-  .catch((err) => console.log(err));
+
+try {
+  await mongoose.connect("mongodb://aaryansingh2905:8eUQSKGrNzjGtSWL@ac-ldxouiq-shard-00-00.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-01.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-02.jkwwfoz.mongodb.net:27017/?ssl=true&replicaSet=atlas-ura3ql-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+  console.log("MongoDB connected successfully");
+} catch (error) {
+  console.error("Error connecting to MongoDB:", error);
+}
+
+// mongoose
+//   .connect("mongodb://aaryansingh2905:8eUQSKGrNzjGtSWL@ac-ldxouiq-shard-00-00.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-01.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-02.jkwwfoz.mongodb.net:27017/?ssl=true&replicaSet=atlas-ura3ql-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0")
+//   .then(() => console.log("mongoDB connected"))
+//   .catch((err) => console.log(err));
 
 //creating a schema for a collection inside our DB
 const userSchema = new mongoose.Schema({
