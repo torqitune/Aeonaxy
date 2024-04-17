@@ -9,7 +9,7 @@ const EmailPage = () => {
     const [email, setEmail] = useState('');     //creating useState hook to store email in a state variable
 
     useEffect(() => {
-        axios.post('http://localhost:8080/email', { userId })       //making a post request again , sending userID , so in response we get the emailID of the user linekd with userID
+        axios.post('https://aeonaxy-6-jzkv.onrender.com/email', { userId })       //making a post request again , sending userID , so in response we get the emailID of the user linekd with userID
             .then(response => {
                 setEmail(response.data.email);              //setting the value of the mail
             })
