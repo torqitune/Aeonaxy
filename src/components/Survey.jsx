@@ -40,7 +40,7 @@ const Survey = () => {
         // In some cases, we  want to prevent this default behavior from happening , we want to validate form data with JavaScript before submitting the form to the server. so prevent it before submitting to server.   
 
         try{
-            const response = await axios.post("https://aeonaxy-7.onrender.com/email",{userId , selectedCards});   //sending selectedCards which is an array in post request
+            const response = await axios.post("https://aeonaxy-8.onrender.com/email",{userId , selectedCards});   //sending selectedCards which is an array in post request
             console.log("survey page send a post request");
             navigateTo(`/email/${userId}`);     //redirecting to email page , while passing uderID (mongoDB unique id).
 

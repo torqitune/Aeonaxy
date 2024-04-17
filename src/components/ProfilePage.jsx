@@ -23,7 +23,7 @@ const ProfilePage = () => {
     
         const imageUrl = image;
         try{
-            const response = await axios.post("https://aeonaxy-7.onrender.com/profile",{userId , imageUrl , location});         //sending userId (mongoDB) and image (image url of local image) and the location in post request
+            const response = await axios.post("https://aeonaxy-8.onrender.com/profile",{userId , imageUrl , location});         //sending userId (mongoDB) and image (image url of local image) and the location in post request
             console.log("profile page, userId and image Url",response.data);
             navigateTo(`/Survey/${userId}`);                    //redirecting to survey page , while passing uderID (mongoDB unique id).
         }catch(err){

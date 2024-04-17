@@ -8,14 +8,10 @@ const cors = require("cors");
 const cloudinary = require("cloudinary").v2;
 const {Resend} = require('resend');
 require('dotenv').config();
-// const resend = new Resend('re_SEApJDa3_NmkTdBBKsuxaBJcJFMCbU1BK');
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 
-// Return "https" URLs by setting secure: true
-// cloudinary.config({
-//   secure: true,
-// });
+//setting up cloudinary creds
 cloudinary.config({
   cloud_name: process.env.cloud_name, 
   api_key: process.env.api_key, 
@@ -41,19 +37,6 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 //conecting to our mongoose DB
-
-// mongodb+srv://aaryansingh2905:Sna9hZFsZoESqBK7@cluster0.h8pzoun.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-
-// try {
-//   await mongoose.connect("mongodb://aaryansingh2905:8eUQSKGrNzjGtSWL@ac-ldxouiq-shard-00-00.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-01.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-02.jkwwfoz.mongodb.net:27017/?ssl=true&replicaSet=atlas-ura3ql-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0", {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   });
-//   console.log("MongoDB connected successfully");
-// } catch (error) {
-//   console.error("Error connecting to MongoDB:", error);
-// }
-
 mongoose
   .connect("mongodb://aaryansingh2905:8eUQSKGrNzjGtSWL@ac-ldxouiq-shard-00-00.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-01.jkwwfoz.mongodb.net:27017,ac-ldxouiq-shard-00-02.jkwwfoz.mongodb.net:27017/?ssl=true&replicaSet=atlas-ura3ql-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0")
   .then(() => console.log("mongoDB connected"))
