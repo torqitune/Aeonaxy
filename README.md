@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-# React + Vite
+Full Stack Developer Project (O.A)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
+Registers a user , upon which a user can upload his/her profile image , chooses multiple cards and a confirmation mail is sent to user.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
-# Aeonaxy
->>>>>>> d38d9fb39339ae1cdf0f19f1781305eb28f80d0e
+## Note
+Try to upload an image < 60kb
