@@ -93,7 +93,7 @@ app.post("/register", async function (req, res) {
 
 //handling post request for profile
 app.post("/profile", async function (req, res) {
-  try {git
+  try {
     //extracting userId ,location and imageUrl from the request body
     const { userId, imageUrl, location } = req.body;
 
