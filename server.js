@@ -15,8 +15,13 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 // Return "https" URLs by setting secure: true
+// cloudinary.config({
+//   secure: true,
+// });
 cloudinary.config({
-  secure: true,
+  cloud_name: process.env.cloud_name, 
+  api_key: process.env.api_key, 
+  api_secret: process.env.api_secret 
 });
 
 
