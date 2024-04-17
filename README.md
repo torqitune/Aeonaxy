@@ -1,7 +1,7 @@
-## Full Stack Developer Project (O.A)
+# Full Stack Developer Project (O.A)
 
-# Description
+## Description
 Registers a user , upon which a user can upload his/her profile image , chooses multiple cards and a confirmation mail is sent to user.
 
-# Note
+## Note
 Try to upload an image < 60kb
